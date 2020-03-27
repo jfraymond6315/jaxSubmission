@@ -9,24 +9,27 @@
 # import jaxSubmission
 # jaxSubmission.AutocompleteProvider.train("The third thing that I need to tell you is that this thing does not think thoroughly.")
 # myList=jaxSubmission.AutocompleteProvider.getWords("thi")
+## Let's verify that the above command worked as expected
 # for i in range(len(myList)):
 # ....print(myList[i], '(', jaxSubmission.Candidate.getConfidence(myList[i]), '), ', end='')
 #
-# (Verify that the output includes the following words and Confidence values:)
-#     "thing" (2), "think" (1), "third" (1), "this" (1)
+## (Verify that the output includes the following words and Confidence values:)
+##     "thing" (2), "think" (1), "third" (1), "this" (1)
 #
 # myList=jaxSubmission.AutocompleteProvider.getWords("nee")
+## Let's verify that the above command worked as expected
 # for i in range(len(myList)):
 # ....print(myList[i], '(', jaxSubmission.Candidate.getConfidence(myList[i]), '), ', end='')
 #
-# (Verify that the output includes the following words and Confidence values: "need" (1) )
+## (Verify that the output includes the following words and Confidence values: "need" (1) )
 #
 # myList=jaxSubmission.AutocompleteProvider.getWords("th")
+## Let's verify that the above command worked as expected
 # for i in range(len(myList)):
 # ....print(myList[i], '(', jaxSubmission.Candidate.getConfidence(myList[i]), '), ', end='')
 # 
-# (Verify that the output includes the following words and Confidence values:)
-#     "that" (2), "thing" (2), "think" (1), "this" (1), "third" (1), "the" (1), "thoroughly" (1)
+## (Verify that the output includes the following words and Confidence values:)
+##     "that" (2), "thing" (2), "think" (1), "this" (1), "third" (1), "the" (1), "thoroughly" (1)
 # 
 # quit()
 #
