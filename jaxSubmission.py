@@ -11,7 +11,7 @@ def removePunctuation(inString):
     punctuation='~!@#$%^&*()_-+={}[]|\:;<,>.?/'
     #
     # Examine each character in the input string
-    for x in Instring:
+    for x in inString:
         # If the character is in "punctuation", then replace it with a null
         if x in punctuation:
             inString = inString.replace(x, "")
@@ -40,7 +40,7 @@ class Candidate:
         #         return the Confidence value
         #     otherwise,
         #         return zero
-        if thisKeyWord in acDictionary:
+        if thisKeyword in acDictionary:
             return acDictionary[thisKeyword]
         else:
             return 0
@@ -92,7 +92,7 @@ class AutocompleteProvider:
         #     is a prefix for each dictionary keyword. 
         #     If it is, then add the keyword to the candidateList
         #
-        for keyWord in acDictionary:
+        for keyword in acDictionary:
             if Candidate.getWord(fragment.lower(), keyword) == keyword:
                 # A match!
                 # Insert the candidate word into the candidateList in order based on its Confidence (desc).
@@ -103,8 +103,8 @@ class AutocompleteProvider:
                 #     3) The candidate Confidence is greater than that of some entry in the list,
                 #         so insert the candidate into the list before the entry with lower Confidence
                 #
-                if len(candidatelist) > 0:
-                    if Candidate.getConfidence(keyword) <= Candidate.getConfidence(candidatelist[len(candidateList)-1]):
+                if len(candidateList) > 0:
+                    if Candidate.getConfidence(keyword) <= Candidate.getConfidence(candidateList[len(candidateList)-1]):
                         # Use-case 2) Candidate Confidence is less than or equal to that of the last entry
                         candidateList.append(keyword)
                     else:
@@ -122,6 +122,3 @@ class AutocompleteProvider:
                     candidateList.append(keyword)
         #
         return candidateList
-
-
-
